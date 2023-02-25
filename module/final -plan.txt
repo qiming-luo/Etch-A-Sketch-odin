@@ -1,5 +1,0 @@
-frame:
-        heading
-        description
-        get user input(prompt/input)
-        grid-show (write a function to apply, take userInput or default number)
