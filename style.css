@@ -22,7 +22,9 @@ body {
 
 #grid {
     border: 1px red solid;
-    
+    width: 800px;
+    height: 800px;
+    margin: 1rem auto;
 }
 
 #btn {

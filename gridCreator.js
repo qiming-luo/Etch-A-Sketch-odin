@@ -1,4 +1,4 @@
-function girdCreator(ele,num){
+export function girdCreator(ele,num){
     let gridMother = document.createElement('div');
     ele.appendChild(gridMother);
     gridMother.style.display = 'grid';
