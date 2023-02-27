@@ -1,6 +1,6 @@
-import {backgroundColorChange} from './backgroundColorChange'
+//import {backgroundColorChange} from '../Etch-A-Sketch-odin/backgroundColorChange'
 
-export function girdCreator(ele,num){
+function girdCreator(ele,num){
     let gridMother = document.createElement('div');
     ele.appendChild(gridMother);
     gridMother.style.display = 'grid';
@@ -13,6 +13,7 @@ export function girdCreator(ele,num){
     for(let i=1; i<=num*num; i++){
         let gridChild = document.createElement('div');
         gridMother.appendChild(gridChild);
+        gridChild.style.backgroundColor = 'green';
         // hover:backgroundColorChange(gridChild);
         gridChild.addEventListener('mouseover', ()=>{
             backgroundColorChange(gridChild);
