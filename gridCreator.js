@@ -1,3 +1,5 @@
+import {backgroundColorChange} from './backgroundColorChange'
+
 export function girdCreator(ele,num){
     let gridMother = document.createElement('div');
     ele.appendChild(gridMother);
@@ -11,7 +13,10 @@ export function girdCreator(ele,num){
     for(let i=1; i<=num*num; i++){
         let gridChild = document.createElement('div');
         gridMother.appendChild(gridChild);
-        gridChild.style.backgroundColor = 'green';
+        // hover:backgroundColorChange(gridChild);
+        gridChild.addEventListener('mouseover', ()=>{
+            backgroundColorChange(gridChild);
+        })
         gridChild.innerHTML = i;
     }
 }
