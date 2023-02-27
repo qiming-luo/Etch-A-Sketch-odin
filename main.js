@@ -8,13 +8,13 @@ function girdCreator(ele,num){
     gridMother.style.aspectRatio = '1/1';
     gridMother.style.gridTemplateColumns = `repeat(${num}, 1fr)`; 
     gridMother.style.gridTemplateRows = `repeat(${num}, 1fr)`;
-    gridMother.style.gap = '0.2rem';
+    //gridMother.style.gap = '0.2rem';
     gridMother.className = 'gridMother';
     //creat childre grid
     for(let i=1; i<=num*num; i++){
         let gridChild = document.createElement('div');
         gridMother.appendChild(gridChild);
-        gridChild.style.backgroundColor = 'green';
+        gridChild.style.backgroundColor = 'lightGray';
         // hover:backgroundColorChange(gridChild);
         gridChild.addEventListener('mouseover', ()=>{
             backgroundColorChange(gridChild);
@@ -37,5 +37,18 @@ let btn = document.getElementById('btn');
 
 // step 1: create initial grid
 girdCreator(grid,10);
+
+// step 2: add event listerner to btn
+const btnHandler = () => {
+    let userInput = prompt('enter a whole number between 1 and 20');
+    if(userInput>=1 && userInput<=20){
+        grid.removeChild(grid.firstChild);
+        girdCreator(grid,userInput);
+    }else{
+        alert('please enter a whole number between 1 and 20');
+    }
+}
+
+btn.addEventListener('click', btnHandler);
 
 
